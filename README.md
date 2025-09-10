@@ -1,43 +1,20 @@
-# Remote Screen & Audio Streaming
+# Surveillance System with Remote Control (Agent + Supervisor)
 
-## Opis
-Jednostavan projekat za **prenos ekrana i zvuka preko LAN-a** između servera i klijenta. Server šalje ekran i mikrofon, klijent prikazuje video i reprodukuje audio.
+## Description
+Agent sends screen (JPEG) and audio to Supervisor. Supervisor can view agents in a grid,
+view a single agent with audio, and optionally take remote control (mouse + keyboard) of an agent.
 
-## Funkcionalnosti
-- Prikaz server ekrana na klijentu
-- Prenos zvuka sa mikrofona servera
-- Video resize 50% radi smanjenja protoka
-- Audio 22050 Hz, CHUNK 2048 radi stabilnijeg prenosa
+## Requirements
+pip install opencv-python mss numpy pyaudio pillow pynput
 
-## Instalacija
-```bash
-git clone <repo_url>
-pip install opencv-python mss pyaudio numpy
-```
+## Run
+1. Start supervisor:
+   python supervisor/main.py
+2. Start agent on each monitored PC:
+   python agent.py
+   - set SERVER_IP in agent.py to supervisor IP
+   - enter unique Agent ID in GUI and Connect
 
-## Korišćenje
-### Server
-```bash
-python server.py
-```
-Čeka video (5000) i audio (5001) konekcije.
-
-### Klijent
-```bash
-python client.py
-```
-Promeni `SERVER_IP` u IP adresu servera ako nisu na istoj mašini. `Esc` zatvara video prozor.
-
-## Struktura
-```
-project/
-│
-├─ server.py
-├─ client.py
-└─ README.md
-```
-
-## Napomene
-- Radi najbolje na LAN mreži
-- TCP može izazvati lag na sporijim mrežama
-- Za real-time Internet streaming preporučuje se WebRTC
+## Notes
+- Control gives remote mouse/keyboard events to the agent. Use only in trusted LAN/test environment.
+- This is a student prototype — no encryption or authentication beyond simple login.
