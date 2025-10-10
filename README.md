@@ -1,4 +1,4 @@
-# Surveillance System with Remote Control (Agent + Supervisor)
+#Simple Surveillance System with Remote Control (Agent + Supervisor)
 
 ## Description
 The agent sends a screen (JPEG) and audio to the Supervisor. A supervisor can view agents in a grid,
