@@ -8,11 +8,10 @@ view a single agent with audio, and optionally take remote control (mouse + keyb
 ```
 PMT/
 │
-├─ build folders (byproduct of pyinstaller)
 ├─ supervisor (folder containing seperated supervisor code)
 ├─ agent.py
 ├─ supervisor.py
-├─ lateh
+├─ lateh/
 │    └─ projekat_from_scrath.tex
 └─ README.md
 ```
@@ -22,16 +21,22 @@ pip install opencv-python mss numpy pyaudio pillow pynput
 
 ## Running the python script
 1. Start supervisor:
-   - python -m supervisor.main
+   - python -m supervisor.main or python supervisor.py
    - login with credentials admin/admin.
 2. Start agent on each monitored PC:
    python agent.py
    - enter unique Agent ID in GUI & Supervisor IP and Connect
 
-## Running the binaries (.exe)
-In coresponding folders can be found .spec files used to build with pyinstaller and in dist/ are binaries.
-To run, simply start the .exe and enter your ID + IP or login as admin with username and password (admin,admin).
+## ~~ Running the binaries (.exe) ~~
+~~ In coresponding folders can be found .spec files used to build ~~ ~~ with pyinstaller and in dist/ are binaries. ~~
+~~ To run, simply start the .exe and enter your ID + IP or login as admin with username and password (admin,admin). ~~
 
+To compile the scripts yourself into binaries, run
+```
+pyinstaller --onefile --windowed --name "appname" --icon "icon.png" scriptname.py
+```
+
+## Check releases for binaries
 
 ## Notes
 - Control gives remote mouse/keyboard events to the agent. Use only in trusted LAN/test environment.
