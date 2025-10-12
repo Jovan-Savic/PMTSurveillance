@@ -17,8 +17,9 @@ PMT/
 ```
 
 ## Requirements for running Python script
-pip install opencv-python mss numpy pyaudio pillow pynput
-
+```
+pip install opencv-python mss numpy pyaudio pillow pynput pyinstaller
+```
 ## Running the Python script
 1. Start supervisor:
    - python -m supervisor.main or python supervisor.py
