@@ -1,4 +1,4 @@
-# Simple Surveillance System with Remote Control (Agent + Supervisor)
+# Simple Surveillance System with Remote Control
 
 
 ![alt text](https://github.com/Jovan-Savic/PMTSurveillance/blob/main/LaTeX/fill%20a4.png)
