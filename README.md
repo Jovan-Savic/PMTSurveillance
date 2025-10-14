@@ -1,5 +1,8 @@
 # Simple Surveillance System with Remote Control (Agent + Supervisor)
 
+
+![alt text](https://github.com/Jovan-Savic/PMTSurveillance/blob/main/LaTeX/fill%20a4.png)
+
 ## Description
 The agent sends a screen (JPEG) and audio to the Supervisor. A supervisor can view agents in a grid,
 View a single agent with audio, and optionally take remote control (mouse + keyboard) of an agent.
@@ -43,3 +46,4 @@ pyinstaller --onefile --windowed --name "appname" --icon "icon.png" scriptname.p
 - Control gives remote mouse/keyboard events to the agent. Use only in a trusted LAN/test environment.
 - This is a student prototype — no encryption or authentication beyond simple login.
 - Documentation is found in lateh/ directory,
+
