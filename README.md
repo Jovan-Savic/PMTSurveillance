@@ -6,7 +6,7 @@
 ## Description
 The agent sends a screen (JPEG) and audio to the Supervisor. A supervisor can view agents in a grid,
 View a single agent with audio, and optionally take remote control (mouse + keyboard) of an agent.
-
+Detailed documentation is available in LaTeX/ folder.
 ## Structure
 ```
 PMT/
